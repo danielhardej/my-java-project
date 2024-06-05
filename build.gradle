@@ -38,7 +38,7 @@ repositories {
     maven {
         url = 'https://maven.pkg.github.com/ScrollLang/skript-parser'
         credentials {
-            username PACKAGES_USER
+            username "danielhardej"
             password GITHUB_TOKEN
         }
     }
