@@ -17,3 +17,6 @@ jobs:
 
       - name: build
         run: ./gradlew build
+        env:
+          PACKAGES_USER: ${{ secrets.PACKAGES_USER }}
+          PACKAGES_TOKEN: ${{ secrets.PACKAGES_TOKEN }}
