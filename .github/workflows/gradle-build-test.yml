@@ -16,10 +16,5 @@ jobs:
           distribution: 'adopt'
           java-version: 17
 
-      - name: setup gradle properties
-        run: |
-          echo "gpr.user=${{ secrets.PACKAGES_USER }}" >> gradle.properties
-          echo "gpr.key=${{ secrets.PACKAGES_TOKEN }}" >> gradle.properties
-
       - name: build
         run: ./gradlew build
