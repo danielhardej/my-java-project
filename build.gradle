@@ -69,8 +69,8 @@ dependencies {
     modImplementation include('org.antlr:antlr4-runtime:4.13.1')
 
     // Scroll & skript-parser
-    implementation ('org.scrolllang:skript-parser:alpha2')
-    implementation ('org.scrolllang:scroll-dev:dev1') {
+    modImplementation ('org.scrolllang:skript-parser:alpha2')
+    modImplementation ('org.scrolllang:scroll-dev:dev1') {
         transitive = false
     }
 
