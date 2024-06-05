@@ -24,23 +24,20 @@ repositories {
 
     // Scroll
     maven {
-        url = 'https://maven.pkg.github.com/ScrollLang/Scroll'
         credentials {
-            username = System.getenv("PACKAGES_USER") ?: project.findProperty("scrollUsername")
-            password = System.getenv("PACKAGES_TOKEN") ?: project.findProperty("scrollPassword")
+            username = project.findProperty("gpr.user") ?: System.getenv("PACKAGES_USER")
+            password = project.findProperty("gpr.key") ?: System.getenv("PACKAGES_TOKEN")
         }
+        url = 'https://maven.pkg.github.com/ScrollLang/Scroll'
     }
 
     // skript-parser
-    ext {
-        GITHUB_TOKEN = System.getenv("GITHUB_TOKEN")
-    }
     maven {
-        url = 'https://maven.pkg.github.com/ScrollLang/skript-parser'
         credentials {
-            username "danielhardej"
-            password GITHUB_TOKEN
+            username = project.findProperty("gpr.user") ?: System.getenv("PACKAGES_USER")
+            password = project.findProperty("gpr.key") ?: System.getenv("PACKAGES_TOKEN")
         }
+        url = 'https://maven.pkg.github.com/ScrollLang/skript-parser'
     }
 }
 
